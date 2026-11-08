@@ -272,7 +272,7 @@ function authForm(mode) {
   app.innerHTML = `<form class="card form" id="auth-form" autocomplete="on">
     <h2 class="center">${reg ? "Регистрация" : "Вход"}</h2>
     <label for="u">Имя игрока</label>
-    <input id="u" name="username" required minlength="3" maxlength="20" autocomplete="username" placeholder="например, Лесник_42">
+    <input id="u" name="username" required minlength="3" maxlength="20" autocomplete="username">
     <label for="p">Пароль</label>
     <input id="p" name="password" type="password" required minlength="6" autocomplete="${reg ? "new-password" : "current-password"}" placeholder="не короче 6 символов">
     <div class="form-error" id="auth-err"></div>
@@ -316,7 +316,7 @@ function adminForm() {
   const local = d => `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}T${pad(d.getHours())}:${pad(d.getMinutes())}`;
   const s = new Date(), e = new Date(Date.now() + 7 * 86400000);
   return `<section class="section"><form class="card" id="comp-form">
-    <h2>Создать соревнование</h2><p class="muted small">Эта форма видна только администратору (первому зарегистрированному игроку).</p>
+    <h2>Создать соревнование</h2><p class="muted small">Эта форма видна только администратору.</p>
     <div class="grid cols-2">
       <div><label>Название</label><input id="c-title" required minlength="3" maxlength="60" placeholder="Кубок первого снега"></div>
       <div><label>Уровень сложности</label><select id="c-diff">${Object.entries(DIFFS).map(([k, d]) => `<option value="${k}">${d.title}</option>`).join("")}</select></div>
