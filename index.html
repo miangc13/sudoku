@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Лес Судоку: соревнования по судоку</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-row">
+      <a href="#/" class="logo">Лес Судоку</a>
+      <nav id="nav" class="nav">
+        <a href="#/play" data-route="/play">Играть</a>
+        <a href="#/competitions" data-route="/competition">Соревнования</a>
+        <a href="#/leaderboard" data-route="/leaderboard">Рейтинг</a>
+        <a href="#/profile" data-route="/profile" id="nav-profile">Профиль</a>
+      </nav>
+      <div id="auth-box" class="auth-box"></div>
+    </div>
+  </header>
+
+  <main id="app" class="wrap"></main>
+
+  <footer class="site-footer">
+    <div class="wrap">Лес Судоку учебный проект</div>
+  </footer>
+
+  <div id="toasts" class="toasts"></div>
+  <script src="/app.js"></script>
+</body>
+</html>
